@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Geoguess better map closer.
 // @namespace    geoguessr user scripts
-// @version      1.1
+// @version      1.2
 // @description  Better map closer.
 // @author       echandler
 // @match        https://www.geoguessr.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=geoguessr.com
-// @updateURL    https://github.com/echandler/Geoguessr-better-guess-map-closer/raw/main/GeoguessrBetterGuessMapCloser.user.js
+// @downloadURL  https://github.com/echandler/Geoguessr-better-guess-map-closer/raw/main/GeoguessrBetterGuessMapCloser.user.js
 // @grant        none
 // ==/UserScript==
 

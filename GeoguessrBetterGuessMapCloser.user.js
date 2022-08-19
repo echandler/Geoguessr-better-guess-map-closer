@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Geoguess better map closer.
 // @namespace    geoguessr user scripts
-// @version      1.2
+// @version      2.0
 // @description  Better map closer.
 // @author       echandler
 // @match        https://www.geoguessr.com/*

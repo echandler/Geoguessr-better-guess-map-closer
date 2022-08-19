@@ -14,7 +14,7 @@
     'use strict';
 
     setInterval(function(){
-       const guessmap = document.querySelector('.guess-map');
+       const guessmap = document.querySelector(".guess-map");
        const canvas = document.querySelector("canvas");
        
        if (guessmap && !guessmap._n) {
@@ -26,8 +26,8 @@
             guessmap._n = true;
        }
        if (canvas && !canvas._n) {
-           canvas.addEventListener('mousedown', function(){
-              const guessmap = document.querySelector('.guess-map');
+           canvas.addEventListener("mousedown", function(){
+              const guessmap = document.querySelector(".guess-map");
               guessmap.classList.remove("guess-map--active");
            });
            canvas._n = true;

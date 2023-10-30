@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Geoguess better map closer v3.1.
-// @namespace    geoguessr user scripts
-// @version      3.1
+// @name         Geoguess better map closer v3.2.
+// @namespace    Geoguess better map closer
+// @version      3.2
 // @description  Better map closer.
 // @author       echandler
 // @match        https://www.geoguessr.com/*
@@ -12,23 +12,28 @@
 
 (function() {
     'use strict';
+     let activeClass = null;
 
     setInterval(function(){
-       const guessmap = document.querySelector(".guess-map");
+       const guessmap = document.querySelector("div[data-qa='guess-map']");
        const canvas = document.querySelector("canvas");
        
        if (guessmap && !guessmap._n) {
             // Sometimes the guess map doesn't open back up.
            
             guessmap.addEventListener("mouseover", function(e){
-                guessmap.classList.add("guess-map--active");
+                if (!activeClass) return;
+                guessmap.classList.add(activeClass);
             });
             guessmap._n = true;
        }
        if (canvas && !canvas._n) {
            canvas.addEventListener("mousedown", function(){
-              const guessmap = document.querySelector(".guess-map");
-              guessmap.classList.remove("guess-map--active");
+              const guessmap = document.querySelector("div[data-qa='guess-map']");
+              if (!activeClass){
+                activeClass = Array.from(guessmap.classList).reduce((x,a)=> x + (/active/i.test(a)? a: ""), "");
+              }
+              guessmap.classList.remove(activeClass);
            });
            canvas._n = true;
        }
